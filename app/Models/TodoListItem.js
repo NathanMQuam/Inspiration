@@ -7,6 +7,7 @@ export default class TodoList {
    }
 
    get Template() {
+      // TODO: Format and style this
       return `<p class="d-flex">
          <div>${this.description}, Completed: ${this.completed}</div>
          <div>
