@@ -28,8 +28,14 @@
 
     
     <main id="app">
-        <div id="todo-list" class="bg-gray">
-            <p>ToDo List, no html yet</p>
+        <div>
+            <form onsubmit="app.todoListController.createTodo(event)">
+                <input type="text" name="task" placeholder="Task to do..." minlength="3" required>
+                <input type="submit" value="create">
+            </form>
+            <div id="todo-list" class="bg-gray">
+                <p>ToDo List, no html yet</p>
+            </div>
         </div>
     </main>
 

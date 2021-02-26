@@ -1,12 +1,18 @@
 export default class TodoList {
-   constructor({description, completed, user, _id, id}) {
-      this.description = description
-      this.completed = completed
-      this.user = user
-      this._id = _id || id
+   constructor(data) {
+      this.description = data.description
+      this.completed = data.completed
+      this.user = data.user
+      this.id = data._id || data.id
    }
 
    get Template() {
-      return `<p>ToDo List, no html yet</p>`
+      return `<p class="d-flex">
+         <div>${this.description}, Completed: ${this.completed}</div>
+         <div>
+            <button type='button' onclick='app.todoListController.updateTodoItem("${this.id}")'>Toggle Complete</button>
+            <button type='button' onclick='app.todoListController.deleteTodoItem("${this.id}")'>Delete</button>
+         </div>
+      </p>`
    }
 }
