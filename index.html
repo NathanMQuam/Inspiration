@@ -15,39 +15,38 @@
 
 
 
-<body class="bg-dark">
-    <!-- <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Api-Inspiration</span>
-            </a>
-        </nav>
-    </header> -->
+<body class="bg-dark container-fluid">
+    <main id="app" class="row">
 
 
-    
-    <main id="app">
-        <div>
+        <div class="col-6 offset-3 p-3 text-light">
+            <div class="row">
+                Weather
+            </div>
+
+            <div class="row">
+                Time
+            </div>
+
+            <div class="row">
+                Quote
+            </div>
+        </div>
+
+
+
+        <div class="col-3 p-3 bg-gray">
             <form onsubmit="app.todoListController.createTodo(event)">
                 <input type="text" name="task" placeholder="Task to do..." minlength="3" required>
                 <input type="submit" value="create">
             </form>
-            <div id="todo-list" class="bg-gray">
+            <div id="todo-list">
                 <p>ToDo List, no html yet</p>
             </div>
         </div>
     </main>
 
 
-
-    <!-- <footer class="container-fluid bg-dark text-light">
-        <div class="row text-center">
-            <div class="col">
-                <p><small>Made with love by Codeworks</small></p>
-            </div>
-        </div>
-    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
