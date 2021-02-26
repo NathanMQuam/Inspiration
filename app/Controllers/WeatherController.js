@@ -1,4 +1,6 @@
 import { ProxyState } from "../AppState.js"
+import { sandboxApi } from "../Services/AxiosService.js"
+import { weatherService } from "../Services/WeatherService.js"
 
 function _draw() {
 
@@ -11,6 +13,6 @@ export default class WeatherController {
    }
 
    getCurrentWeather() {
-
+      weatherService.getCurrentWeather()
    }
 }

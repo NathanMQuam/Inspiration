@@ -1,5 +1,5 @@
-class QuoteController {
+class QuoteService {
 
 }
 
-export const quoteController = new QuoteController()
+export const quoteService = new QuoteService()

@@ -1,5 +1,5 @@
-class ClockController {
+class ClockService {
 
 }
 
-export const clockController = new ClockController()
+export const clockService = new ClockService()
