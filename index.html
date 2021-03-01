@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Api-Inspiration</title>
 </head>
 
@@ -18,28 +19,32 @@
     <main id="app" class="row">
 
 
-        <div class="col-6 offset-3 text-light">
+        <div class="col-6 offset-3 text-light d-flex flex-column justify-content-between text-center">
             <div class="row p-3">
-                <div id="weather" onclick="app.weatherController.cycleTempUnit()" style="cursor: pointer;">Weather</div>
+                <div id="weather" class="w-100 weather d-flex justify-content-around" onclick="app.weatherController.cycleTempUnit()" style="cursor: pointer;">Weather</div>
             </div>
 
+            <!--
             <div class="row p-3">
                 <div id="clock">Clock</div>
             </div>
+            -->
 
             <div class="row p-3">
-                <div id="quote">Quote</div>
+                <div id="quote" class="w-100 weather">Quote</div>
             </div>
         </div>
 
 
 
-        <div class="col-3 p-3 bg-gray">
-            <form onsubmit="app.todoListController.createTodo(event)">
-                <input type="text" name="task" placeholder="Task to do..." minlength="3" required>
-                <input type="submit" value="create">
-            </form>
-            <div id="todo-list"></div>
+        <div class="col-3 p-3 d-flex flex-column justify-content-end">
+            <div class="todoList p-3 text-light">
+                <form onsubmit="app.todoListController.createTodo(event)">
+                    <input type="text" name="task" placeholder="Task to do..." minlength="3" required>
+                    <input type="submit" value="create">
+                </form>
+                <div id="todo-list"></div>
+            </div>
         </div>
     </main>
 
